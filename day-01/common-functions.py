@@ -21,3 +21,7 @@ print(g)
 
 h = sum([50, 120, 70, 69])
 print(h)
+
+print(help('keywords'))
+
+print(dir(str)) #give information about string

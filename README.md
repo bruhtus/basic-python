@@ -19,3 +19,5 @@ To define a function, python provides the `def` keyword. The function block of c
 Function can also return values, if a function does not return any, the value of the function is none.
 
 If we don't know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding `*` before the parameters name.
+
+A module is a file containing a single variable, or a function, or a big code base.

@@ -11,3 +11,11 @@ There're four collection data types in python:
 If the processing logic require so, the sequential flow of execution can be altered in two way:
 - Conditional execution: a block of one or more stetements will be executed if a certain expression is true.
 - Repertitive execution: a block of one or more statements will be repetitively executed as long as a certain expression is true.
+
+Function is a reuseable block of code or programming statements  designed to perform a certain task.
+
+To define a function, python provides the `def` keyword. The function block of code is executed only if we call it.
+
+Function can also return values, if a function does not return any, the value of the function is none.
+
+If we don't know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding `*` before the parameters name.

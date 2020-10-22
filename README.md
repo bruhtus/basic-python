@@ -21,3 +21,5 @@ Function can also return values, if a function does not return any, the value of
 If we don't know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding `*` before the parameters name.
 
 A module is a file containing a single variable, or a function, or a big code base.
+
+Lamda function is a small anonymous function without a name. It can take any number of arguments but can only have one expression. We need it when we want to write an anonymous function inside another function.

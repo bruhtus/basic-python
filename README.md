@@ -24,7 +24,9 @@ If we don't know the number of arguments we pass to our function, we can create 
 
 A module is a file containing a single variable, or a function, or a big code base.
 
-Lamda function is a small anonymous function without a name. It can take any number of arguments but can only have one expression. We need it when we want to write an anonymous function inside another function.
+Lambda function is a small anonymous function without a name. It can take any number of arguments but can only have one expression. We need it when we want to write an anonymous function inside another function.
+
+The differnce between `lambda` and `def` is that `def` used to define normal functions (need name) and `lambda` used to define anonymous functions (doesn't need a name).
 
 Function can perform these following operations:
 - a function can take one or more functions as parameters

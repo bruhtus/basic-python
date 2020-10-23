@@ -60,13 +60,13 @@ i.e. **method is defined within a class and hence they are dependent on that cla
 
 ### Python Error Types
 
-- SyntaxError
-- NameError
-- IndexError
-- ModuleNotFoundError
-- AttributeError
-- KeyError
-- TypeError
-- ImportError
-- ValueError
-- ZeroDivisionError
+- SyntaxError: the syntax was wrong.
+- NameError: variable name not defined.
+- IndexError: usually index out of range (print index length first to check).
+- ModuleNotFoundError: there's no such module.
+- AttributeError: the module doesn't have such attribute or function.
+- KeyError: basically a typo.
+- TypeError: different data type (convert the data type first).
+- ImportError: there's no such function in the module.
+- ValueError: there's a problem with the value (whether it's not supported or something else).
+- ZeroDivisionError: cannot divide a number by zero.

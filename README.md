@@ -76,3 +76,12 @@ i.e. **method is defined within a class and hence they are dependent on that cla
 ### Try and Except
 
 ![](try-except.png)
+
+To analyze the problem, we can use different error types with except. For example: <br>
+```python
+try:
+    print 'hello word'
+
+except SyntaxError:
+    print('the syntax is wrong')
+```

@@ -49,7 +49,7 @@ That's similar to:
 def function(n):
     statement(s)
 
-function = wrapper(function)
+variable = wrapper(function)
 ```
 
 ### The Difference Between Method and Function

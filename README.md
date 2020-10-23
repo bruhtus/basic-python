@@ -84,4 +84,10 @@ try:
 
 except SyntaxError:
     print('the syntax is wrong')
+
+else:
+    print('forget about it')
+
+finally:
+    print('it is over')
 ```

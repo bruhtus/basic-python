@@ -91,3 +91,5 @@ else:
 finally:
     print('it is over')
 ```
+
+Using `*` means there's only one value, that's why args using only `*` and the syntax be like `*args`. Using `**` means there're two value or to be specific a key and a value, that's why kwargs and dict using `**` and the syntax be like `**kwargs` and `**dict`. (args = arguments, kwargs = keyword arguments).

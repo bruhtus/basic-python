@@ -70,3 +70,5 @@ i.e. **method is defined within a class and hence they are dependent on that cla
 - ImportError: there's no such function in the module.
 - ValueError: there's a problem with the value (whether it's not supported or something else).
 - ZeroDivisionError: cannot divide a number by zero.
+
+**ImportError: cannot import name 'datetime' from partially initialized module 'datetime' (most likely due to a circular import)** >> that happens because of the file name the same as the module name.

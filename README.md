@@ -159,3 +159,5 @@ with open('./files.txt') as f:
     lines = f.read().splitlines()
     print(lines)
 ```
+
+> JSON stands for JavaScript Object Notation.

@@ -14,6 +14,12 @@ If the processing logic require so, the sequential flow of execution can be alte
 - Conditional execution: a block of one or more stetements will be executed if a certain expression is true.
 - Repertitive execution: a block of one or more statements will be repetitively executed as long as a certain expression is true.
 
+Using `*` means there's only one value (it basically save all the arguments into a tuple), that's why args using only `*` and the syntax be like `*args`. Using `**` means there're two value or to be precise a key and a value (it's basically save all the arguments into dictionary), that's why kwargs and dict using `**` and the syntax be like `**kwargs` and `**dict`. (args = arguments, kwargs = keyword arguments).
+
+If we're interested in an index of a list, we use `enumerate`.
+
+Use `zip` to combine lists when looping through them.
+
 Function is a reuseable block of code or programming statements  designed to perform a certain task.
 
 To define a function, python provides the `def` keyword. The function block of code is executed only if we call it.
@@ -92,8 +98,16 @@ finally:
     print('it is over')
 ```
 
-Using `*` means there's only one value (it basically save all the arguments into a tuple), that's why args using only `*` and the syntax be like `*args`. Using `**` means there're two value or to be precise a key and a value (it's basically save all the arguments into dictionary), that's why kwargs and dict using `**` and the syntax be like `**kwargs` and `**dict`. (args = arguments, kwargs = keyword arguments).
+### Regular Expressions
 
-If we're interested in an index of a list, we use `enumerate`.
+A regular expression or RegEx is a special text that helps to find patterns in data.
 
-Use `zip` to combine lists when looping through them.
+A RegEx can be used to check if some pattern exists in a different data type. To use RegEx in python first we should import the RegEx module which is called `re`.
+
+#### Function in `re` Module
+
+- `re.match()`: search *only in the beginning of the first line* of the string and returns matched objects if found, else returns none.
+- `re.search`: return a match object if there is one anywhere in the string, including multiline strings.
+- `re.findall`: return a list containing all matches.
+- `re.split`: takes a string, splits it at the match points, returns a list.
+- `re.sub`: replaces one or many matches within a string.

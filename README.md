@@ -141,3 +141,21 @@ open('filename', mode)
 - `x`: create specified file, returns an error if the file exist.
 - `t`: text mode, basically it's a default mode (read and write string from and to file which are encoded in a specific encoding if specified, if not, the default is platform dependent).
 - `b`: binary mode, the data is read and written in the form of bytes objects. This mode should be used for all files that don't contain text (e.g. images).
+- `+`: open for updating (reading and writing).
+
+The default mode of `open` is reading, so we don't have to specify `r` or `rt`.
+
+Opened file has different reading method:
+- read()
+- readline()
+- readlines()
+
+An opened file has to be closed with `close()` method.
+
+Another way to open a file:
+
+```python
+with open('./files.txt') as f:
+    lines = f.read().splitlines()
+    print(lines)
+```

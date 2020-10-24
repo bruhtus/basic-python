@@ -1,6 +1,6 @@
 ### Report
 
-#### MOdule
+#### Module
 
 ##### OS module
 > perform operatinng system task.

@@ -137,7 +137,7 @@ open('filename', mode)
 `open()` function mode:
 - `r`: open file for reading, error if the file does not exist.
 - `a`: open file for appending, creates the file if it does not exist.
-- `w`: open file for writing, creates the file if it does not exist.
+- `w`: open file for writing (overwrite the content of the file), creates the file if it does not exist.
 - `x`: create specified file, returns an error if the file exist.
 - `t`: text mode, basically it's a default mode (read and write string from and to file which are encoded in a specific encoding if specified, if not, the default is platform dependent).
 - `b`: binary mode, the data is read and written in the form of bytes objects. This mode should be used for all files that don't contain text (e.g. images).

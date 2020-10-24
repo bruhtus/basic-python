@@ -111,3 +111,12 @@ A RegEx can be used to check if some pattern exists in a different data type. To
 - `re.findall`: return a list containing all matches.
 - `re.split`: takes a string, splits it at the match points, returns a list.
 - `re.sub`: replaces one or many matches within a string.
+
+Example Syntax:
+
+```python
+re.match(substring, string, re.I)
+#substring is a pattern
+#string is the text we look for the pattern
+#re.I is case ignore flag (ignore uppercase or lowercase)
+```

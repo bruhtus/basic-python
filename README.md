@@ -122,3 +122,22 @@ re.match(substring, string, re.I)
 ```
 
 For more info about RegEx or `re` module, you can check [here](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/18_Day_Regular_expressions/18_regular_expressions.md#writing-regex-patterns).
+
+### File Handling
+
+File handling is an import part of programming which allows us to create, read, update, dan delete files.
+
+In python, to handle data we use `open()` built-in function.
+
+```python
+open('filename', mode)
+#mode (r, a, w, x, t, b) could be to read, write, update.
+```
+
+`open()` function mode:
+- `r`: open file for reading, error if the file does not exist.
+- `a`: open file for appending, creates the file if it does not exist.
+- `w`: open file for writing, creates the file if it does not exist.
+- `x`: create specified file, returns an error if the file exist.
+- `t`: text mode, basically it's a default mode (read and write string from and to file which are encoded in a specific encoding if specified, if not, the default is platform dependent).
+- `b`: binary mode, the data is read and written in the form of bytes objects. This mode should be used for all files that don't contain text (e.g. images).

@@ -120,3 +120,5 @@ re.match(substring, string, re.I)
 #string is the text we look for the pattern
 #re.I is case ignore flag (ignore uppercase or lowercase)
 ```
+
+For more info about RegEx or `re` module, you can check [here](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/18_Day_Regular_expressions/18_regular_expressions.md#writing-regex-patterns).

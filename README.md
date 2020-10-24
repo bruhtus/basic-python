@@ -2,7 +2,7 @@ This is 15 days of me learning the python basic again instead of doing an actual
 
 Source:
 - [30 days of python](https://github.com/Asabeneh/30-Days-Of-Python)
-- [decorators](https://stackoverflow.com/a/1594484)
+- [Decorators](https://stackoverflow.com/a/1594484)
 
 There're four collection data types in python:
 - List: A collection which is ordered and changeable (modifiable). Allows duplicate members.

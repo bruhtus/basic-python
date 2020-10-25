@@ -199,3 +199,7 @@ webbrowser.open_new_tab(url)
 ```
 
 For brief info about PIP, you can check [here](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/20_Day_Python_package_manager/20_python_package_manager.md).
+
+> API stands for Application Program Interface. It is a means to exchange structured data between servers primarily as json data.
+
+To open a network connection, we need a package called `requests`, it allows to open a network connection and to implement CRUD (Create, Read, Update, and Delete) operations.

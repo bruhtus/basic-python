@@ -177,6 +177,6 @@ syntax to convert dictionary to json: <br>
 json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8, and so on. It can beautifies the json.
 ```
 
-### Open File CSV
-
 > CSV stands for Comma Separated Values. CSV is a simple file format used to store tabular data, such as a spreadsheet or database.
+
+> XML is another structured data format which looks like HTML.

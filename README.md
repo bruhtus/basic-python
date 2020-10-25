@@ -180,3 +180,5 @@ json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8, and so on.
 > CSV stands for Comma Separated Values. CSV is a simple file format used to store tabular data, such as a spreadsheet or database.
 
 > XML is another structured data format which looks like HTML.
+
+For more info about XML, you can check [here](https://docs.python.org/2/library/xml.etree.elementtree.html).

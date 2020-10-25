@@ -182,3 +182,20 @@ json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8, and so on.
 > XML is another structured data format which looks like HTML.
 
 For more info about XML, you can check [here](https://docs.python.org/2/library/xml.etree.elementtree.html).
+
+### PIP
+
+> PIP stands for Preferred Installer Program.
+
+> Package is a python module that can contain one or more modules or other packages. A module or modules that we can install to our application is a package.
+
+For example using web browser module: <br>
+```python
+import webbrowser
+
+url = 'https://bruhtus.github.io'
+
+webbrowser.open_new_tab(url)
+```
+
+For brief info about PIP, you can check [here](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/20_Day_Python_package_manager/20_python_package_manager.md).

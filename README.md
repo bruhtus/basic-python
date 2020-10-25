@@ -174,5 +174,5 @@ person_json = '''{
 
 syntax to convert dictionary to json: <br>
 ```python
-json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8. It can beautifies the json.
+json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8, and so on. It can beautifies the json.
 ```

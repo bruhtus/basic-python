@@ -161,3 +161,11 @@ with open('./files.txt') as f:
 ```
 
 > JSON stands for JavaScript Object Notation.
+
+JSON must be using double quotes, for example: <br>
+```python
+person_json = '''{
+    "name": "Robertus",
+    "skills": ["python", "adobe lightroom", "adobe photoshop"]
+    }'''
+```

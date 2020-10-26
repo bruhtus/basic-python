@@ -1,39 +1,49 @@
-This is 15 days of me learning the python basic again instead of doing an actual project. Basically back to basic.
+This is a few days of me learning the python basic again instead of doing an actual project. Basically back to basic.
 
 Source:
 - [30 days of python](https://github.com/Asabeneh/30-Days-Of-Python)
 - [Decorators](https://stackoverflow.com/a/1594484)
 
+README Contents:
+- [Data Types](#data-types-in-python).
+- [Sequential Flow](#sequential-flow-of-execution).
+- [Function](#function).
+- [Difference Between Method and Function](#the-difference-between-method-and-function).
+- [Error Types](#python-error-types).
+- [Try and Except](#try-and-except).
+- [Regular Expresion](#regular-expresion).
+- [File Handling](#file-handling).
+- [JSON to Dictionary and Vice Versa](#json-to-dictionary-and-vice-versa).
+- [PIP](#pip).
+- [Create A Package](#creating-a-package).
+- [Side Notes](#side-notes).
+
+Repo Contents:
+- [Day 1 - operators](day-01).
+- [Day 2 - string and number table](day-02).
+- [Day 3 - list](day-03),
+- [Day 4 - dictionary, set, and tuple](day-04).
+- [Day 5 - list with if](day-05).
+- [Day 6 - for and while looping](day-06).
+- [Day 7 - decorators, lambda, def, closures, map, and reduce](day-07).
+- [Day 8 - datetime, date, strftime, timedelta, and time](day-08).
+- [Day 9 - regular expresion, spreading, unpack arguments, unpack dictionary, and zip](day-09).
+- [Day 10 - file handling, json to dictionary and vice versa](day-10).
+- [Day 11 - create package, and requests module](day-11).
+
+### Data Types in Python
 There're four collection data types in python:
 - List: A collection which is ordered and changeable (modifiable). Allows duplicate members.
 - Tuple: A collection which is ordered and unchangeable or unmodifiable. Allows duplicate members.
 - Set: A collection which is unordered, unindexed, unmodifiable but you can add new items. No duplicate members.
 - Dictionary: A collection which is unordered, changeable (modifiable), and indexed. No duplicate members.
 
+### Sequential Flow of Execution
 If the processing logic require so, the sequential flow of execution can be altered in two way:
 - Conditional execution: a block of one or more stetements will be executed if a certain expression is true.
 - Repertitive execution: a block of one or more statements will be repetitively executed as long as a certain expression is true.
 
-Using `*` means there's only one value (it basically save all the arguments into a tuple), that's why args using only `*` and the syntax be like `*args`. Using `**` means there're two value or to be precise a key and a value (it's basically save all the arguments into dictionary), that's why kwargs and dict using `**` and the syntax be like `**kwargs` and `**dict`. (args = arguments, kwargs = keyword arguments).
-
-If we're interested in an index of a list, we use `enumerate`.
-
-Use `zip` to combine lists when looping through them.
-
-Function is a reuseable block of code or programming statements  designed to perform a certain task.
-
-To define a function, python provides the `def` keyword. The function block of code is executed only if we call it.
-
-Function can also return values, if a function does not return any, the value of the function is none.
-
-If we don't know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding `*` before the parameters name.
-
-A module is a file containing a single variable, or a function, or a big code base.
-
-Lambda function is a small anonymous function without a name. It can take any number of arguments but can only have one expression. We need it when we want to write an anonymous function inside another function.
-
-The differnce between `lambda` and `def` is that `def` used to define normal functions (need name) and `lambda` used to define anonymous functions (doesn't need a name).
-
+### Function
 Function can perform these following operations:
 - a function can take one or more functions as parameters
 - a function can be returned as a result of another function
@@ -203,3 +213,78 @@ For brief info about PIP, you can check [here](https://github.com/Asabeneh/30-Da
 > API stands for Application Program Interface. It is a means to exchange structured data between servers primarily as json data.
 
 To open a network connection, we need a package called `requests`, it allows to open a network connection and to implement CRUD (Create, Read, Update, and Delete) operations.
+
+We will see `get`, `status_code`, `headers`, `text`, and `json` methods in `requests` module:
+- `get()`: to open a network and fetch data from url (it returns a response object).
+- `status_code`: after we fetched data, we can check the status of the operation (success, error, etc).
+- `headers`: to check the header types.
+- `text`: to extract the text from the fetched response object.
+- `json`: to extract json data.
+
+### Creating A Package
+
+> A module can contain one or more relevant modules. A package is actually a folder containing one or more module files.
+
+The package folder contains a special file called `__init__.py` (it stores the package's content). If we put `__init__.py` in the package folder, python start recognizes it as a package.
+
+The `__init__.py` exposes specified resources from its modules to be imported to other python files. An empty `__init__.py` file makes all functions available when a package is imported.
+
+The example of folder structure of python package: <br>
+```sh
+─ mypackage
+    ├── __init__.py
+    └── module.py
+```
+
+#### Further Information About Packages
+
+- Database:
+    - SQLAlchemy or SQLObject: Object oriented access to several different database systems. `pip install SQLAlchemy`.
+
+- Web Development:
+    - Django: High-level web framework. `pip install django`.
+    - Flask: Microframework for python based on werkzeug, jinja 2. `pip install flask`.
+
+- HTML Parser:
+    - Beautiful Soup: HTML/XML parser designed for quick turnaround projects like screen-scraping, will accept bad markup. `pip install beautifulsoup4`.
+    - PyQuery: implement jQuery in python; faster than BeautifulSoup apparently (who knows).
+
+- XML Processing:
+    - ElementTree: The element type is a simple but flexible container object, designed to store hierarchical data structures such as simplified XML infosets in memory.
+
+- GUI:
+    - PyQt: Bindings for the cross-platform Qt framework.
+    - TkInter: The traditional python user interface toolkit.
+
+- Data Analysis, Data Science, and Machine Learning:
+    - Numpy (numeric python): Known as one of the most popular machine learning library in python.
+    - Pandas: A machine learning library in python that provides data structures of high-level and a wide variety of tools for analysis.
+    - SciPy: A machine learning library for application developers and engineers. SciPy library contains modules for optimazation, linear algebra, integration, image processing, and statistics.
+    - Scikit-Learn: It is NumPy and SciPy.
+    - Tensorflow: A machine learning library built by Google.
+    - Keras: Provides an easier mechanism to express neural networks, also provides some of the best utilities for compiling models, processing datasets, visualization of graphs, and much more.
+
+- Network:
+    - requests: A package which we can use to send requests to a server (get, post, delete, put). `pip install requests`.
+
+### Side Notes
+Using `*` means there's only one value (it basically save all the arguments into a tuple), that's why args using only `*` and the syntax be like `*args`. Using `**` means there're two value or to be precise a key and a value (it's basically save all the arguments into dictionary), that's why kwargs and dict using `**` and the syntax be like `**kwargs` and `**dict`. (args = arguments, kwargs = keyword arguments).
+
+If we're interested in an index of a list, we use `enumerate`.
+
+Use `zip` to combine lists when looping through them.
+
+Function is a reuseable block of code or programming statements  designed to perform a certain task.
+
+To define a function, python provides the `def` keyword. The function block of code is executed only if we call it.
+
+Function can also return values, if a function does not return any, the value of the function is none.
+
+If we don't know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding `*` before the parameters name.
+
+A module is a file containing a single variable, or a function, or a big code base.
+
+Lambda function is a small anonymous function without a name. It can take any number of arguments but can only have one expression. We need it when we want to write an anonymous function inside another function.
+
+The differnce between `lambda` and `def` is that `def` used to define normal functions (need name) and `lambda` used to define anonymous functions (doesn't need a name).
+

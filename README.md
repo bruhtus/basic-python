@@ -16,6 +16,7 @@ README Contents:
 - [JSON to Dictionary and Vice Versa](#json-to-dictionary-and-vice-versa).
 - [PIP](#pip).
 - [Create A Package](#creating-a-package).
+- [Classes and Objects](#classes-and-objects).
 - [Side Notes](#side-notes).
 
 Repo Contents:
@@ -29,7 +30,10 @@ Repo Contents:
 - [Day 8 - datetime, date, strftime, timedelta, and time](day-08).
 - [Day 9 - regular expresion, spreading, unpack arguments, unpack dictionary, and zip](day-09).
 - [Day 10 - file handling, json to dictionary and vice versa](day-10).
-- [Day 11 - create package, and requests module](day-11).
+- [Day 11 - create package, webbrowser module, and requests module](day-11).
+- [Day 12 - init constructor, ](day-12).
+
+---
 
 ### Data Types in Python
 There're four collection data types in python:
@@ -38,10 +42,14 @@ There're four collection data types in python:
 - Set: A collection which is unordered, unindexed, unmodifiable but you can add new items. No duplicate members.
 - Dictionary: A collection which is unordered, changeable (modifiable), and indexed. No duplicate members.
 
+---
+
 ### Sequential Flow of Execution
 If the processing logic require so, the sequential flow of execution can be altered in two way:
 - Conditional execution: a block of one or more stetements will be executed if a certain expression is true.
 - Repertitive execution: a block of one or more statements will be repetitively executed as long as a certain expression is true.
+
+---
 
 ### Function
 Function can perform these following operations:
@@ -68,11 +76,15 @@ def function(n):
 variable = wrapper(function)
 ```
 
+---
+
 ### The Difference Between Method and Function
 
 1. Function and method both look similar as they perform in almost similar way, but the key difference is the concept of **Class and its Object**.
 2. Funciton can be called **only by its name**, as it is defined independently. But methods **can't be called by its name only**, we need to invoke the class by a reference of that class in which it is defined. <br>
 i.e. **method is defined within a class and hence they are dependent on that class**.
+
+---
 
 ### Python Error Types
 
@@ -88,6 +100,8 @@ i.e. **method is defined within a class and hence they are dependent on that cla
 - ZeroDivisionError: cannot divide a number by zero.
 
 **ImportError: cannot import name 'datetime' from partially initialized module 'datetime' (most likely due to a circular import)** >> that happens because of the file name the same as the module name.
+
+---
 
 ### Try and Except
 
@@ -107,6 +121,8 @@ else:
 finally:
     print('it is over')
 ```
+
+---
 
 ### Regular Expressions
 
@@ -132,6 +148,8 @@ re.match(substring, string, re.I)
 ```
 
 For more info about RegEx or `re` module, you can check [here](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/18_Day_Regular_expressions/18_regular_expressions.md#writing-regex-patterns).
+
+---
 
 ### File Handling
 
@@ -170,6 +188,8 @@ with open('./files.txt') as f:
     print(lines)
 ```
 
+---
+
 ### JSON To Dictionary and Vice Versa
 
 > JSON stands for JavaScript Object Notation.
@@ -192,6 +212,8 @@ json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8, and so on.
 > XML is another structured data format which looks like HTML.
 
 For more info about XML, you can check [here](https://docs.python.org/2/library/xml.etree.elementtree.html).
+
+---
 
 ### PIP
 
@@ -221,6 +243,8 @@ We will see `get`, `status_code`, `headers`, `text`, and `json` methods in `requ
 - `text`: to extract the text from the fetched response object.
 - `json`: to extract json data.
 
+---
+
 ### Creating A Package
 
 > A module can contain one or more relevant modules. A package is actually a folder containing one or more module files.
@@ -235,6 +259,8 @@ The example of folder structure of python package: <br>
     ├── __init__.py
     └── module.py
 ```
+
+---
 
 #### Further Information About Packages
 
@@ -266,6 +292,20 @@ The example of folder structure of python package: <br>
 
 - Network:
     - requests: A package which we can use to send requests to a server (get, post, delete, put). `pip install requests`.
+
+---
+
+### Classes and Objects
+
+> Python is an object oriented programming language. Everything in python is an object with its properties and methods. A class is like an object constructor or a "blueprint" for creating objects. We instantiate a class to create an object. The class defines attributes and the behavior of the object, while the object on the other hand, represents the class.
+
+Class name should be `CamelCase`.
+
+Like the constructor function in java or javascript, python has also a build-in **init()** constructor function.
+
+the `__init__` constructor function has self parameter which is a reference to the current instance of the class.
+
+---
 
 ### Side Notes
 Using `*` means there's only one value (it basically save all the arguments into a tuple), that's why args using only `*` and the syntax be like `*args`. Using `**` means there're two value or to be precise a key and a value (it's basically save all the arguments into dictionary), that's why kwargs and dict using `**` and the syntax be like `**kwargs` and `**dict`. (args = arguments, kwargs = keyword arguments).

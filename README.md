@@ -1,7 +1,7 @@
 This is a few days of me learning the python basic again instead of doing an actual project. Basically back to basic.
 
 Source:
-- [30 days of python](https://github.com/Asabeneh/30-Days-Of-Python)
+- [30 days of python](https://github.com/Asabeneh/30-Days-Of-Python) (only until day 21, day 22 - 30 in new repo)
 - [Decorators](https://stackoverflow.com/a/1594484)
 
 README Contents:

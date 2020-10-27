@@ -31,7 +31,7 @@ Repo Contents:
 - [Day 9 - regular expresion, spreading, unpack arguments, unpack dictionary, and zip](day-09).
 - [Day 10 - file handling, json to dictionary and vice versa](day-10).
 - [Day 11 - create package, webbrowser module, and requests module](day-11).
-- [Day 12 - init constructor, ](day-12).
+- [Day 12 - init constructor, object methods, inheritance](day-12).
 
 ---
 
@@ -305,6 +305,26 @@ Like the constructor function in java or javascript, python has also a build-in 
 
 the `__init__` constructor function has self parameter which is a reference to the current instance of the class.
 
+#### Inheritance
+
+> Using inheritance we can re-use parent class code. Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+The parent or super or base class is the class which gives all the methods and properties. The child class is the class that inherits from another class.
+
+If we didn't call `__init__` constructor in the child class, we still can access all the properties from the parent. But if we do call the constructor, we can access the parent properties by calling `super`.
+
+We can add a new method to the child or we can overwrite the parent class by creating the same method name in the child class.
+
+When we add the `__init__` function, the child class will no longer inherit the parent's `__init__` function.
+
+There's this error `SyntaxError: non-default argument follows default argument` when you not give default value for all the argument. Example to produce that error: <br>
+```python
+class student(person):
+    def __init__(self, firstname='Robertus', lastname, gender, age, country, city):
+        self.gender = gender
+        super().__init__(firstname, lastname, age, country, city)
+```
+
 ---
 
 ### Side Notes
@@ -328,3 +348,4 @@ Lambda function is a small anonymous function without a name. It can take any nu
 
 The differnce between `lambda` and `def` is that `def` used to define normal functions (need name) and `lambda` used to define anonymous functions (doesn't need a name).
 
+---

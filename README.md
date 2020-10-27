@@ -319,13 +319,109 @@ We can add a new method to the child or we can overwrite the parent class by cre
 
 When we add the `__init__` function, the child class will no longer inherit the parent's `__init__` function.
 
-There's this error `SyntaxError: non-default argument follows default argument` when you not give default value for all the argument. Example to produce that error: <br>
+There's this error `SyntaxError: non-default argument follows default argument` when there's argument that doesn't have default value after the argument that has a default value. Example to produce that error: <br>
 ```python
 class student(person):
     def __init__(self, firstname='Robertus', lastname, gender, age, country, city):
         self.gender = gender
         super().__init__(firstname, lastname, age, country, city)
 ```
+
+##### Access Parent Properties by Calling `super()`
+
+Consider the code example given below, here we have a class named `Square` and another class named `Cube` which inherits the class `Square`:
+
+```python
+class Square:
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side * self.side
+
+class Cube(Square):
+    def area(self):
+        face_area = self.side * self.side
+        return face_area * 6
+
+    def volume(self):
+        face_area = self.side * self.side
+        return face_area * self.side
+```
+
+> Since `Cube` class does not have an `__init__` method, the `__init__` of `Square` class will be used for initialization of `Cube` instances.
+
+Considering the example above, we know that each face of a cube is a square and hence, `face_area` of `Cube` represents `area` of a `Square`.
+But as we have overridden the `area()` method in `Cube`, we can't call `area()` method of `Square` using `self.area()`. Now, this is a situation where `super()` comes in rescue.
+
+`super()` returns a proxy object of the parent class and then you call the method of your choice on that proxy object, and then we can call the `area()` method of `Square` class using `super()` as `super().area()`. Here's a modified class `Cube`:
+
+```python
+class Square:
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side * self.side
+
+class Cube(Square):
+    def area(self):
+        return super().area() * 6
+
+    def volume(self):
+        return super().area() * self.side()
+```
+
+To access the methods of super-class which is not an immediate parent of the sub-class, we use `super()` with two arguments. Let's consider an example of three classes named `Square`, `SquarePrism`, and `Cube` to understand how to use `super()` with arguments.
+
+In this example, the `Cube` class will inherit the `SquarePrism` class and the `SquarePrism` class will inherit the `Square` class. For `Square` class we'll use the same definition we used in the previous example. Here's the definition of the newly defined `SquarePrism` class:
+
+```python
+class SquarePrism(Square):
+    def __init__(self, side, height):
+        self.side = side
+        self.height = height
+
+    def face_area(self):
+        base_area = super().area()
+        lateral_area = self.side * self.height
+        return base_area, lateral_area
+
+    def area(self):
+        base_area = super().area()
+        lateral_area = self.side * self.height
+        return 2 * base_area + 4 * lateral_area
+```
+
+A `SquarePrism` instance has two attributes, the `side` of it's square base and the `height` of the square prism. Since the base is a square, for base area of the square prism we call the method `super().area()`.
+
+Now in `Cube` class we're gonna using `super()` with parameters:
+
+```python
+class Cube(SquarePrism):
+    def __init__(self, side):
+        super().__init__(side = side, height = side)
+
+    def face_area(self):
+        return super(SquarePrism, self).area()
+
+    def area(self):
+        return super().area()
+```
+
+Since the `Square` class is not an immidiate parent of the `Cube` class, we cannot access the `area()` method of the `Square` as super().area() as it will call the method `SquarePrism.area()` instead.
+
+So, on that example we use `super(SquarePrism, self).face_area()` to call the `area()` method of the `Square` class.
+In the first argument, `SquarePrism` signifies that `super()` searches for the `area()` method in the immediate parent of the class `SquarePrism`, that is the `Square` class.
+The use of `self` as the second parameter provides the context of the current `Cube` object to `super()` for the requested `area()` method to act upon, that's why we can use `area()` method of `Square` class and use `super().area()` to access `area` method of `Square` class.
+
+Remember, to use `super()` in two argument form, it it necessary that the object passed as the second argument is an instance of the `type` passed as first argument.
+
+> Since the `Cube` class is a child of the `SquarePrism` class, a `Cube` instance is also an instance of the `SquarePrism` class and the `Square` class.
+
+> It's worthwhile to note that the zero argument form of `super()` can only be used inside a class definition as it is auto-filled by the compiler with the appropriate parameters.
+
+I.e. if we use `super()` inside a class, say `x`, `super()` will be converted into `super(x, self)` by the compiler.
 
 ---
 

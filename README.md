@@ -209,12 +209,6 @@ syntax to convert dictionary to json: <br>
 json_file = json.dums(dictionary, indent=4) #indent could be 2, 4, 8, and so on. It can beautifies the json.
 ```
 
-> CSV stands for Comma Separated Values. CSV is a simple file format used to store tabular data, such as a spreadsheet or database.
-
-> XML is another structured data format which looks like HTML.
-
-For more info about XML, you can check [here](https://docs.python.org/2/library/xml.etree.elementtree.html).
-
 ---
 
 ### PIP
@@ -261,8 +255,6 @@ The example of folder structure of python package: <br>
     ├── __init__.py
     └── module.py
 ```
-
----
 
 #### Further Information About Packages
 
@@ -445,5 +437,11 @@ A module is a file containing a single variable, or a function, or a big code ba
 Lambda function is a small anonymous function without a name. It can take any number of arguments but can only have one expression. We need it when we want to write an anonymous function inside another function.
 
 The differnce between `lambda` and `def` is that `def` used to define normal functions (need name) and `lambda` used to define anonymous functions (doesn't need a name).
+
+> CSV stands for Comma Separated Values. CSV is a simple file format used to store tabular data, such as a spreadsheet or database.
+
+> XML is another structured data format which looks like HTML.
+
+For more info about XML, you can check [here](https://docs.python.org/2/library/xml.etree.elementtree.html).
 
 ---

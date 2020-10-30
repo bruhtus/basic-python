@@ -103,6 +103,8 @@ i.e. **method is defined within a class and hence they are dependent on that cla
 
 **ImportError: cannot import name 'datetime' from partially initialized module 'datetime' (most likely due to a circular import)** >> that happens because of the file name the same as the module name.
 
+For more info you can check python documentation [here](https://docs.python.org/3/library/exceptions.html).
+
 ---
 
 ### Try and Except

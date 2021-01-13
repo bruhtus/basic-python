@@ -44,6 +44,8 @@ There're four collection data types in python:
 - Set: A collection which is unordered, unindexed, unmodifiable but you can add new items. No duplicate members.
 - Dictionary: A collection which is unordered, changeable (modifiable), and indexed. No duplicate members.
 
+![Data types](data-types.jpg)
+
 ---
 
 ### Sequential Flow of Execution
